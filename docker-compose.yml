@@ -5,7 +5,7 @@ services:
     image: postgres:15
     container_name: kalorilens_postgres
     ports:
-      - '5433:5432' # Port modified to 5433 as requested
+      - '5432:5432'
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password123
