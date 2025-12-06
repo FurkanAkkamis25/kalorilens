@@ -1,0 +1,74 @@
+[
+  {
+    "marker": "ferritin",
+    "unit": "ng/mL",
+    "min": 15,
+    "max": 150,
+    "reference": "Kadın/Erkek genel aralığı",
+    "rules": [
+      {
+        "condition": "value < 30", // 15-30 arası gizli eksiklik sayılabilir
+        "severity": "Düşük Risk",
+        "message": "Demir depolarınızın doluluk oranı alt sınırlarda. Yorgunluk ve halsizlik hissedebilirsiniz.",
+        "recommendation": ["C Vitamini ile birlikte kırmızı et/ıspanak tüketimini artırın.", "Çay ve kahveyi yemeklerden 1 saat önce/sonra tüketin."],
+        "related_nutrient": "iron"
+      },
+      {
+        "condition": "value < 15",
+        "severity": "Kritik Düşük",
+        "message": "Ciddi demir eksikliği belirtisi olabilir. Mutlaka bir uzmana danışın.",
+        "recommendation": ["Hemen doktora görünün.", "Demir takviyesi gerekebilir."],
+        "related_nutrient": "iron"
+      },
+      {
+        "condition": "value > 150",
+        "severity": "Yüksek",
+        "message": "Vücutta bir iltihap (enflamasyon) veya aşırı demir yüklenmesi olabilir. Doktor kontrolü gereklidir.",
+        "recommendation": ["Alkol tüketimini azaltın.", "Doktora danışmadan demir takviyesi almayın."]
+      }
+    ]
+  },
+  {
+    "marker": "b12",
+    "unit": "pg/mL",
+    "min": 200,
+    "max": 900,
+    "reference": "Genel sağlıklı aralık",
+    "rules": [
+      {
+        "condition": "value < 200",
+        "severity": "Düşük",
+        "message": "B12 eksikliği unutkanlık, konsantrasyon zorluğu yapabilir. Kırmızı kan hücrelerinin üretimi için kritik.",
+        "recommendation": ["Yumurta, süt ürünleri, ciğer gibi hayvansal gıdaları artırın.", "Eksiklik yüksekse takviye düşünün."],
+        "nutrient": "B12"
+      },
+      {
+        "condition": "value >= 200 AND value <= 900",
+        "severity": "Normal",
+        "message": "B12 seviyeniz optimal aralıkta. Dengeli beslenmeye devam edin."
+      }
+    ]
+  },
+  {
+    "marker": "vitamin_d",
+    "unit": "ng/mL",
+    "min": 30,
+    "max": 100,
+    "reference": "Yeterli seviye (Bazı kaynaklar > 50 önerir)",
+    "rules": [
+      {
+        "condition": "value < 20",
+        "severity": "Kritik Eksik",
+        "message": "D vitamini seviyeniz çok düşük. Bu durum bağışıklığı ve kemik sağlığını olumsuz etkiler.",
+        "recommendation": ["Hemen takviyeye başlayın (doktor onayı ile).", "Bol bol güneşlenmeye özen gösterin."],
+        "nutrient": "Vitamin D"
+      },
+      {
+        "condition": "value >= 20 AND value < 30",
+        "severity": "Yetersiz",
+        "message": "D vitamini seviyeniz sınırda. Kemik ve bağışıklık sisteminiz için artırmanız önerilir.",
+        "recommendation": ["Yağlı balıklar, yumurta sarısı tüketin.", "Güneş ışığından faydalanın."]
+      }
+    ]
+  }
+]
