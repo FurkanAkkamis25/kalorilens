@@ -1,0 +1,128 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") // .env dosyasından okur
+}
+
+// ------ MODELLERİN BURADA BAŞLIYOR ------
+
+// Kullanıcının ana profili
+model User {
+  id             String         @id @default(uuid())
+  firebaseUid    String?        @unique @map("firebase_uid") // Firebase'den gelen ID (Opsiyonel)
+  password       String         // Şifre (Hashlenmiş)
+  email          String         @unique
+  displayName    String?        @map("display_name")
+  age            Int?
+  heightCm       Int?           @map("height_cm")
+  weightKg       Float?         @map("weight_kg")
+  activityLevel  ActivityLevel? @map("activity_level")
+  goalType       GoalType?      @map("goal_type")
+  createdAt      DateTime       @default(now()) @map("created_at")
+  updatedAt      DateTime       @updatedAt @map("updated_at")
+
+  // İlişkiler
+  goal          Goal? // Bir kullanıcının bir hedefi vardır
+  reminders     Reminder[]
+  userBadges    UserBadge[]
+  dailySummaries DailySummary[]
+}
+
+// Kullanıcının hedefleri
+model Goal {
+  id          String   @id @default(uuid())
+  userId      String   @unique @map("user_id") // 1'e 1 ilişki için unique
+  dailyKcal   Int      @map("daily_kcal")
+  carbPct     Int      @default(50) @map("carb_pct")
+  proteinPct  Int      @default(25) @map("protein_pct")
+  fatPct      Int      @default(25) @map("fat_pct")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // İlişkiyi tanımla
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// Gıda sözlüğü (Yumurta, Avokado vb.)
+model FoodDictionary {
+  id              String   @id @default(uuid())
+  name            String
+  kcalPer100g     Float    @map("kcal_per_100g")
+  proteinPer100g  Float    @map("protein_per_100g")
+  carbPer100g     Float    @map("carb_per_100g")
+  fatPer100g      Float    @map("fat_per_100g")
+  servingUnit     String?  @map("serving_unit") // "adet", "bardak"
+  servingGrams    Float?   @map("serving_grams") // 1 adet = 50g
+  stockImageUrl   String?  @map("stock_image_url")
+}
+
+// Hatırlatıcılar
+model Reminder {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  type      String   // "ilaç", "su", "spor"
+  title     String
+  timesJson String   @map("times_json") // Veya Json?
+  daysJson  String   @map("days_json") // Veya Json?
+  enabled   Boolean  @default(true)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// Rozet tanımları
+model Badge {
+  id          String      @id @default(uuid())
+  code        String      @unique // "LOG_3_DAYS_STREAK"
+  title       String
+  description String
+  imageUrl    String?     @map("image_url")
+  userBadges  UserBadge[]
+}
+
+// Kazanılan rozetler
+model UserBadge {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  badgeId   String   @map("badge_id")
+  earnedAt  DateTime @default(now()) @map("earned_at")
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  badge Badge @relation(fields: [badgeId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, badgeId]) // Bir kullanıcı bir rozeti bir kez kazanır
+}
+
+// ------ Enum'lar (seçenek listeleri) ------
+
+enum ActivityLevel {
+  sedentary // Hareketsiz
+  light     // Az hareketli
+  moderate  // Orta
+  active    // Aktif
+}
+
+enum GoalType {
+  lose_weight // Kilo ver
+  maintain    // Kilo koru
+  gain_muscle // Kas yap
+}
+
+// Günlük Özet (Postgres)
+model DailySummary {
+  id           String   @id @default(uuid())
+  userId       String   @map("user_id")
+  date         DateTime @default(now()) // Sadece tarih kısmı önemli olacak
+  totalKcal    Int      @default(0) @map("total_kcal")
+  totalProtein Float    @default(0) @map("total_protein")
+  totalCarb    Float    @default(0) @map("total_carb")
+  totalFat     Float    @default(0) @map("total_fat")
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, date])
+}
