@@ -7,8 +7,7 @@
     "reference": "Kadın/Erkek genel aralığı",
     "rules": [
       {
-        "condition": "value < 30", // 15-30 arası gizli eksiklik sayılabilir
-        "severity": "Düşük Risk",
+        "condition": "value < 30", 
         "message": "Demir depolarınızın doluluk oranı alt sınırlarda. Yorgunluk ve halsizlik hissedebilirsiniz.",
         "recommendation": ["C Vitamini ile birlikte kırmızı et/ıspanak tüketimini artırın.", "Çay ve kahveyi yemeklerden 1 saat önce/sonra tüketin."],
         "related_nutrient": "iron"

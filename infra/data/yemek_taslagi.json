@@ -5,7 +5,7 @@
   "is_healthy": true,
   "description": "Klasik, doyurucu ve besleyici bir çorba.",
   
-  // Temel besin değerleri (100 gram veya 100 ml için)
+ 
   "base_nutrition_100": {
     "kcal": 65,
     "protein": 2.6,
@@ -14,12 +14,12 @@
     "fiber": 1.2
   },
   
-  // Porsiyon Bilgisi (Bu sayede kullanıcı '1 Kase' dediğinde sistem gramını bilecek)
+ 
   "unit_options": [
     {
       "unitName": "1 Kase (Orta Boy)",
-      "grams": 200, // 200 ml kabul edelim
-      "calculatedKcal": 130 // (65 kcal/100ml * 2)
+      "grams": 200, 
+      "calculatedKcal": 130 
     },
     {
       "unitName": "1 kepçe",
@@ -28,9 +28,9 @@
     }
   ],
   
-  // Mikro Besinler (Kan tahlili kurallarını desteklemek için önemlidir!)
+ 
   "vitamins_and_minerals": {
-    "iron": 0.8, // 100g'daki demir (mg) miktarı
+    "iron": 0.8, 
     "vitamin_c": 0.5,
     "calcium": 12
   }
