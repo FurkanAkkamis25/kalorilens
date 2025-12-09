@@ -12,11 +12,11 @@ ai_models = {}
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    print("\n⏳ AI Modelleri Yükleniyor...")
+    print("\n AI Modelleri Yükleniyor...")
     ai_models["processor"] = ViTImageProcessor.from_pretrained("nateraw/food")
     ai_models["food_model"] = ViTForImageClassification.from_pretrained("nateraw/food")
     ai_models["ocr_reader"] = easyocr.Reader(['tr', 'en'], gpu=False)
-    print("✅ Modeller Hazır!")
+    print(" Modeller Hazır!")
     yield
     ai_models.clear()
 
@@ -56,9 +56,9 @@ async def predict_food(file: UploadFile = File(...)):
             "score": round(score, 2), # confidence yerine score
             "nutrition": {       # Yeni eklenen alan
                 "calories": 0,   # Veritabanı bağlanana kadar 0
-                "protein": "0g",
-                "fat": "0g",
-                "carbs": "0g"
+                "protein": 0,
+                "fat": 0,
+                "carbs": 0
             }
         }
 
