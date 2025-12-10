@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  # 1. AI Service (Sena's Configuration)
+  ai_service:
+    build: ./ai-service
+    container_name: kalorilens_ai
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./ai-service:/app
+    environment:
+      - FLASK_ENV=development
+
+  # 2. Postgres (Sena's Configuration)
+  postgres:
+    image: postgres:15
+    container_name: kalorilens_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: kalorilens_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: kalorilens_pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@kalorilens.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+
+  # 3. MongoDB (Sena's Configuration)
+  mongo:
+    image: mongo:6.0
+    container_name: kalorilens_mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  mongo-express:
+    image: mongo-express
+    container_name: kalorilens_mongo_express
+    restart: always
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password123
+      ME_CONFIG_MONGODB_URL: mongodb://admin:password123@mongo:27017/
+      ME_CONFIG_BASICAUTH: "false"
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongo
+
+  # 5. Backend API (User's Service connected to above)
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: kalorilens_api
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://admin:password123@postgres:5432/kalorilens_db
+      MONGO_URL: mongodb://admin:password123@mongo:27017/kalorilens_db
+      AI_SERVICE_URL: http://ai_service:5000
+    depends_on:
+      - postgres
+      - mongo
+      - ai_service
+
+volumes:
+  postgres_data:
+  mongo_data:
