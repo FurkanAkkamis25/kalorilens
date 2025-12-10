@@ -1,0 +1,23 @@
+{
+  "name": "kalorilens-data-seeder",
+  "version": "1.0.0",
+  "description": "KaloriLens projesi için veri yükleme (seeding) ve mantık scriptleri.",
+  "main": "seed.js",
+  "scripts": {
+    "dev:up": "docker-compose up -d",
+    "seed": "node seed.js"
+  },
+  "keywords": [
+    "git",
+    "docker",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1",
+    "string-similarity": "^4.0.4"
+  }
+}
