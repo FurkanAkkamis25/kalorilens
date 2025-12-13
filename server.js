@@ -31,7 +31,7 @@ try {
 
 
 // --- Konfigürasyonlar ---
-const MONGODB_URI = 'mongodb://admin:password123@localhost:27017/kalorilens?authSource=admin';
+const MONGODB_URI = 'mongodb+srv://admin:kalorilens123@cluster0.hvr88te.mongodb.net/kalorilens?appName=Cluster0';
 const PORT = 3000; 
 
 // --- Uygulama Başlatma ---

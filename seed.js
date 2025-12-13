@@ -7,8 +7,8 @@ const mongoose = require('mongoose');
 const CSV_FILE_NAME = 'Yemeklik Liste.csv';
 const CSV_FILE_PATH = path.join(__dirname, 'infra', 'data', CSV_FILE_NAME); 
 // Kimlik doğrulama, port ve veritabanı adresi ayarlandı
-const MONGODB_URI = 'mongodb://admin:password123@localhost:27017/kalorilens?authSource=admin';
-
+// DÜZELTME: Bu, BULUT (Atlas) veritabanı adresidir.
+const MONGODB_URI = 'mongodb+srv://admin:kalorilens123@cluster0.hvr88te.mongodb.net/kalorilens?appName=Cluster0';
 
 // --- MongoDB Şeması ---
 const FoodSchema = new mongoose.Schema({
