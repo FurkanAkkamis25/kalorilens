@@ -8,7 +8,12 @@ const mongoose = require('mongoose');
 const CSV_FILE_NAME = 'Yemeklik Liste.csv';
 const CSV_FILE_PATH = path.join(__dirname, 'infra', 'data', CSV_FILE_NAME);
 // Kimlik doğrulama, port ve veritabanı adresi ayarlandı
-const MONGODB_URI = process.env.MONGO_URI || 'mongodb://admin:password123@localhost:27017/kalorilens?authSource=admin';
+const MONGODB_URI = process.env.MONGO_URI;
+
+if (!MONGODB_URI) {
+    console.error('Hata: MONGO_URI ortam değişkeni tanımlanmamış! Lütfen .env dosyasını kontrol edin.');
+    process.exit(1);
+}
 
 
 // --- MongoDB Şeması ---
