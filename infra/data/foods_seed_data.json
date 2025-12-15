@@ -1,0 +1,1325 @@
+[
+  {
+    "name": "Kuru Fasulye (Sulu)",
+    "slug": "kuru_fasulye",
+    "calories": 90,
+    "protein": 6.7,
+    "carbohydrates": 15.6
+  },
+  {
+    "name": "Mercimek Çorbası",
+    "slug": "mercimek_corbasi",
+    "calories": 48,
+    "protein": 3.8,
+    "carbohydrates": 7.8
+  },
+  {
+    "name": "Ezogelin Çorbası",
+    "slug": "ezogelin_corbasi",
+    "calories": 52,
+    "protein": 3.0,
+    "carbohydrates": 8.5
+  },
+  {
+    "name": "Domates Çorbası",
+    "slug": "domates_corbasi",
+    "calories": 30,
+    "protein": 1.5,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Yayla Çorbası",
+    "slug": "yayla_corbasi",
+    "calories": 45,
+    "protein": 2.5,
+    "carbohydrates": 5.5
+  },
+  {
+    "name": "Ayran (Normal)",
+    "slug": "ayran",
+    "calories": 36,
+    "protein": 2.8,
+    "carbohydrates": 3.5
+  },
+  {
+    "name": "Yoğurt (Tam Yağlı)",
+    "slug": "yogurt",
+    "calories": 90,
+    "protein": 5.0,
+    "carbohydrates": 4.5
+  },
+  {
+    "name": "Pirinç Pilavı",
+    "slug": "pirinc_pilavi",
+    "calories": 130,
+    "protein": 2.5,
+    "carbohydrates": 28.0
+  },
+  {
+    "name": "Bulgur Pilavı",
+    "slug": "bulgur_pilavi",
+    "calories": 110,
+    "protein": 3.5,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Tavuk Sote",
+    "slug": "tavuk_sote",
+    "calories": 140,
+    "protein": 20.0,
+    "carbohydrates": 4.0
+  },
+  {
+    "name": "Et Sote",
+    "slug": "et_sote",
+    "calories": 180,
+    "protein": 25.0,
+    "carbohydrates": 3.0
+  },
+  {
+    "name": "Musakka",
+    "slug": "musakka",
+    "calories": 150,
+    "protein": 8.0,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "İzmir Köfte",
+    "slug": "izmir_kofte",
+    "calories": 160,
+    "protein": 12.0,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "Mantı (Sosuyla)",
+    "slug": "manti",
+    "calories": 190,
+    "protein": 7.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Sarma (Yaprak)",
+    "slug": "sarma",
+    "calories": 145,
+    "protein": 4.5,
+    "carbohydrates": 18.0
+  },
+  {
+    "name": "Dolma (Biber)",
+    "slug": "dolma",
+    "calories": 120,
+    "protein": 4.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Pide (Kıymalı)",
+    "slug": "pide",
+    "calories": 280,
+    "protein": 15.0,
+    "carbohydrates": 30.0
+  },
+  {
+    "name": "Lahmacun",
+    "slug": "lahmacun",
+    "calories": 250,
+    "protein": 12.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Ispanak Yemeği",
+    "slug": "ispanak",
+    "calories": 70,
+    "protein": 3.5,
+    "carbohydrates": 8.0
+  },
+  {
+    "name": "Karnıyarık",
+    "slug": "karniyarik",
+    "calories": 150,
+    "protein": 7.0,
+    "carbohydrates": 12.0
+  },
+  {
+    "name": "Makarna (Sossuz)",
+    "slug": "makarna",
+    "calories": 130,
+    "protein": 4.5,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Salata (Yeşil)",
+    "slug": "salata",
+    "calories": 15,
+    "protein": 1.0,
+    "carbohydrates": 3.0
+  },
+  {
+    "name": "Patates Kızartması",
+    "slug": "patates_kizartmasi",
+    "calories": 290,
+    "protein": 3.5,
+    "carbohydrates": 35.0
+  },
+  {
+    "name": "Su Böreği",
+    "slug": "su_boregi",
+    "calories": 280,
+    "protein": 10.0,
+    "carbohydrates": 30.0
+  },
+  {
+    "name": "Sigara Böreği",
+    "slug": "sigara_boregi",
+    "calories": 310,
+    "protein": 8.0,
+    "carbohydrates": 35.0
+  },
+  {
+    "name": "Yumurta (Haşlanmış)",
+    "slug": "yumurta",
+    "calories": 155,
+    "protein": 12.6,
+    "carbohydrates": 1.1
+  },
+  {
+    "name": "Omlet",
+    "slug": "omlet",
+    "calories": 180,
+    "protein": 13.0,
+    "carbohydrates": 2.5
+  },
+  {
+    "name": "Menemen",
+    "slug": "menemen",
+    "calories": 120,
+    "protein": 5.0,
+    "carbohydrates": 8.0
+  },
+  {
+    "name": "Sucuklu Yumurta",
+    "slug": "sucuklu_yumurta",
+    "calories": 350,
+    "protein": 18.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Peynir (Beyaz)",
+    "slug": "beyaz_peynir",
+    "calories": 280,
+    "protein": 18.0,
+    "carbohydrates": 2.0
+  },
+  {
+    "name": "Siyah Zeytin",
+    "slug": "siyah_zeytin",
+    "calories": 115,
+    "protein": 0.8,
+    "carbohydrates": 6.3
+  },
+  {
+    "name": "Yeşil Zeytin",
+    "slug": "yesil_zeytin",
+    "calories": 145,
+    "protein": 1.0,
+    "carbohydrates": 3.8
+  },
+  {
+    "name": "Ekmek (Beyaz)",
+    "slug": "beyaz_ekmek",
+    "calories": 266,
+    "protein": 7.9,
+    "carbohydrates": 50.6
+  },
+  {
+    "name": "Ekmek (Tam Buğday)",
+    "slug": "tam_bugday_ekmek",
+    "calories": 247,
+    "protein": 9.5,
+    "carbohydrates": 44.5
+  },
+  {
+    "name": "Çay (Şekersiz)",
+    "slug": "cay",
+    "calories": 1,
+    "protein": 0.1,
+    "carbohydrates": 0.3
+  },
+  {
+    "name": "Süt (Yarım Yağlı)",
+    "slug": "sut",
+    "calories": 47,
+    "protein": 3.3,
+    "carbohydrates": 4.8
+  },
+  {
+    "name": "Mısır Gevreği",
+    "slug": "misir_gevregi",
+    "calories": 370,
+    "protein": 8.0,
+    "carbohydrates": 84.0
+  },
+  {
+    "name": "Meyve Suyu (Portakal)",
+    "slug": "portakal_suyu",
+    "calories": 45,
+    "protein": 0.7,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "Kola (Normal)",
+    "slug": "kola",
+    "calories": 42,
+    "protein": 0.0,
+    "carbohydrates": 10.6
+  },
+  {
+    "name": "Gazoz",
+    "slug": "gazoz",
+    "calories": 40,
+    "protein": 0.0,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "Türk Kahvesi (Şekersiz)",
+    "slug": "turk_kahvesi",
+    "calories": 0,
+    "protein": 0.1,
+    "carbohydrates": 0.1
+  },
+  {
+    "name": "Espresso",
+    "slug": "espresso",
+    "calories": 1,
+    "protein": 0.1,
+    "carbohydrates": 0.1
+  },
+  {
+    "name": "Pizza (Karışık)",
+    "slug": "pizza",
+    "calories": 250,
+    "protein": 12.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Hamburger",
+    "slug": "hamburger",
+    "calories": 295,
+    "protein": 15.0,
+    "carbohydrates": 28.0
+  },
+  {
+    "name": "Cheeseburger",
+    "slug": "cheeseburger",
+    "calories": 310,
+    "protein": 16.0,
+    "carbohydrates": 27.0
+  },
+  {
+    "name": "Tavuk Dürüm",
+    "slug": "tavuk_durum",
+    "calories": 200,
+    "protein": 15.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Adana Kebap",
+    "slug": "adana_kebap",
+    "calories": 280,
+    "protein": 22.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "İskender Kebap",
+    "slug": "iskender_kebap",
+    "calories": 220,
+    "protein": 15.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Baklava",
+    "slug": "baklava",
+    "calories": 400,
+    "protein": 7.0,
+    "carbohydrates": 45.0
+  },
+  {
+    "name": "Sütlaç",
+    "slug": "sutlac",
+    "calories": 130,
+    "protein": 4.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Dondurma (Vanilyalı)",
+    "slug": "dondurma",
+    "calories": 207,
+    "protein": 3.5,
+    "carbohydrates": 23.5
+  },
+  {
+    "name": "Apple Pie",
+    "slug": "apple_pie",
+    "calories": 237,
+    "protein": 2.5,
+    "carbohydrates": 32.2
+  },
+  {
+    "name": "Baby Back Ribs",
+    "slug": "baby_back_ribs",
+    "calories": 215,
+    "protein": 25.8,
+    "carbohydrates": 0.2
+  },
+  {
+    "name": "Beef Carpaccio",
+    "slug": "beef_carpaccio",
+    "calories": 145,
+    "protein": 21.0,
+    "carbohydrates": 0.5
+  },
+  {
+    "name": "Beignets",
+    "slug": "beignets",
+    "calories": 300,
+    "protein": 6.0,
+    "carbohydrates": 40.0
+  },
+  {
+    "name": "Biryani",
+    "slug": "biryani",
+    "calories": 170,
+    "protein": 8.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Clam Chowder",
+    "slug": "clam_chowder",
+    "calories": 85,
+    "protein": 5.0,
+    "carbohydrates": 8.0
+  },
+  {
+    "name": "Crème brûlée",
+    "slug": "creme_brulee",
+    "calories": 218,
+    "protein": 4.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Croque Madame",
+    "slug": "croque_madame",
+    "calories": 280,
+    "protein": 15.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Cup Cakes",
+    "slug": "cup_cakes",
+    "calories": 350,
+    "protein": 5.0,
+    "carbohydrates": 50.0
+  },
+  {
+    "name": "Deviled Eggs",
+    "slug": "deviled_eggs",
+    "calories": 200,
+    "protein": 10.0,
+    "carbohydrates": 1.0
+  },
+  {
+    "name": "Donuts",
+    "slug": "donuts",
+    "calories": 417,
+    "protein": 5.0,
+    "carbohydrates": 58.0
+  },
+  {
+    "name": "Dumplings",
+    "slug": "dumplings",
+    "calories": 150,
+    "protein": 5.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Edamame",
+    "slug": "edamame",
+    "calories": 122,
+    "protein": 11.0,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "Falafel",
+    "slug": "falafel",
+    "calories": 333,
+    "protein": 13.0,
+    "carbohydrates": 31.0
+  },
+  {
+    "name": "Fish and Chips",
+    "slug": "fish_and_chips",
+    "calories": 250,
+    "protein": 15.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "French Toast",
+    "slug": "french_toast",
+    "calories": 220,
+    "protein": 9.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Fried Calamari",
+    "slug": "fried_calamari",
+    "calories": 177,
+    "protein": 18.0,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "Fried Rice",
+    "slug": "fried_rice",
+    "calories": 170,
+    "protein": 6.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Gyoza",
+    "slug": "gyoza",
+    "calories": 200,
+    "protein": 8.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Hot Dog",
+    "slug": "hot_dog",
+    "calories": 290,
+    "protein": 10.0,
+    "carbohydrates": 22.0
+  },
+  {
+    "name": "Lasagna",
+    "slug": "lasagna",
+    "calories": 135,
+    "protein": 7.0,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "Macaroni and Cheese",
+    "slug": "macaroni_and_cheese",
+    "calories": 180,
+    "protein": 8.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Miso Soup",
+    "slug": "miso_soup",
+    "calories": 30,
+    "protein": 2.0,
+    "carbohydrates": 4.0
+  },
+  {
+    "name": "Oysters",
+    "slug": "oysters",
+    "calories": 81,
+    "protein": 9.0,
+    "carbohydrates": 4.0
+  },
+  {
+    "name": "Paella",
+    "slug": "paella",
+    "calories": 150,
+    "protein": 10.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Peking Duck",
+    "slug": "peking_duck",
+    "calories": 350,
+    "protein": 25.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Poutine",
+    "slug": "poutine",
+    "calories": 300,
+    "protein": 10.0,
+    "carbohydrates": 30.0
+  },
+  {
+    "name": "Red Velvet Cake",
+    "slug": "red_velvet_cake",
+    "calories": 380,
+    "protein": 4.0,
+    "carbohydrates": 55.0
+  },
+  {
+    "name": "Sashimi",
+    "slug": "sashimi",
+    "calories": 130,
+    "protein": 20.0,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Scallops",
+    "slug": "scallops",
+    "calories": 111,
+    "protein": 21.0,
+    "carbohydrates": 3.0
+  },
+  {
+    "name": "Spring Rolls",
+    "slug": "spring_rolls",
+    "calories": 150,
+    "protein": 5.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Steak",
+    "slug": "steak",
+    "calories": 250,
+    "protein": 30.0,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Tiramisu",
+    "slug": "tiramisu",
+    "calories": 240,
+    "protein": 4.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Tuna Tartare",
+    "slug": "tuna_tartare",
+    "calories": 180,
+    "protein": 25.0,
+    "carbohydrates": 2.0
+  },
+  {
+    "name": "Waffles",
+    "slug": "waffles",
+    "calories": 275,
+    "protein": 6.0,
+    "carbohydrates": 35.0
+  },
+  {
+    "name": "Grilled Cheese Sandwich",
+    "slug": "grilled_cheese_sandwich",
+    "calories": 300,
+    "protein": 15.0,
+    "carbohydrates": 30.0
+  },
+  {
+    "name": "Guacamole",
+    "slug": "guacamole",
+    "calories": 160,
+    "protein": 2.0,
+    "carbohydrates": 8.5
+  },
+  {
+    "name": "Hot and Sour Soup",
+    "slug": "hot_and_sour_soup",
+    "calories": 45,
+    "protein": 2.0,
+    "carbohydrates": 6.0
+  },
+  {
+    "name": "Ice Cream",
+    "slug": "ice_cream",
+    "calories": 207,
+    "protein": 3.5,
+    "carbohydrates": 23.5
+  },
+  {
+    "name": "Jalebi",
+    "slug": "jalebi",
+    "calories": 366,
+    "protein": 4.0,
+    "carbohydrates": 75.0
+  },
+  {
+    "name": "Lobster Bisque",
+    "slug": "lobster_bisque",
+    "calories": 150,
+    "protein": 8.0,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "Strawberry Shortcake",
+    "slug": "strawberry_shortcake",
+    "calories": 200,
+    "protein": 3.0,
+    "carbohydrates": 30.0
+  },
+  {
+    "name": "Sugar Cookies",
+    "slug": "sugar_cookies",
+    "calories": 485,
+    "protein": 5.0,
+    "carbohydrates": 65.0
+  },
+  {
+    "name": "Sushi",
+    "slug": "sushi",
+    "calories": 150,
+    "protein": 8.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Tacos",
+    "slug": "tacos",
+    "calories": 200,
+    "protein": 10.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Tamales",
+    "slug": "tamales",
+    "calories": 180,
+    "protein": 5.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Takoyaki",
+    "slug": "takoyaki",
+    "calories": 180,
+    "protein": 7.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Tempura",
+    "slug": "tempura",
+    "calories": 200,
+    "protein": 5.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Huevos Rancheros",
+    "slug": "huevos_rancheros",
+    "calories": 180,
+    "protein": 12.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Hummus",
+    "slug": "hummus",
+    "calories": 166,
+    "protein": 7.9,
+    "carbohydrates": 14.3
+  },
+  {
+    "name": "Miso",
+    "slug": "miso",
+    "calories": 198,
+    "protein": 11.7,
+    "carbohydrates": 26.5
+  },
+  {
+    "name": "Omelette",
+    "slug": "omelette",
+    "calories": 180,
+    "protein": 13.0,
+    "carbohydrates": 2.5
+  },
+  {
+    "name": "Onion Rings",
+    "slug": "onion_rings",
+    "calories": 350,
+    "protein": 4.0,
+    "carbohydrates": 45.0
+  },
+  {
+    "name": "Oyster Rockefeller",
+    "slug": "oyster_rockefeller",
+    "calories": 200,
+    "protein": 8.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Pad Thai",
+    "slug": "pad_thai",
+    "calories": 180,
+    "protein": 8.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Pancakes",
+    "slug": "pancakes",
+    "calories": 227,
+    "protein": 6.0,
+    "carbohydrates": 35.0
+  },
+  {
+    "name": "Pho",
+    "slug": "pho",
+    "calories": 50,
+    "protein": 4.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Pita",
+    "slug": "pita",
+    "calories": 266,
+    "protein": 9.0,
+    "carbohydrates": 55.0
+  },
+  {
+    "name": "Pork Chop",
+    "slug": "pork_chop",
+    "calories": 200,
+    "protein": 25.0,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Pork Katsu",
+    "slug": "pork_katsu",
+    "calories": 280,
+    "protein": 20.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Pork Loin",
+    "slug": "pork_loin",
+    "calories": 180,
+    "protein": 27.0,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Prime Rib",
+    "slug": "prime_rib",
+    "calories": 300,
+    "protein": 28.0,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Pulled Pork Sandwich",
+    "slug": "pulled_pork_sandwich",
+    "calories": 250,
+    "protein": 18.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Quesadilla",
+    "slug": "quesadilla",
+    "calories": 280,
+    "protein": 15.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Ramen",
+    "slug": "ramen",
+    "calories": 150,
+    "protein": 6.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Ravioli",
+    "slug": "ravioli",
+    "calories": 180,
+    "protein": 8.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Red Bean Soup",
+    "slug": "red_bean_soup",
+    "calories": 70,
+    "protein": 4.0,
+    "carbohydrates": 12.0
+  },
+  {
+    "name": "Risotto",
+    "slug": "risotto",
+    "calories": 120,
+    "protein": 4.0,
+    "carbohydrates": 18.0
+  },
+  {
+    "name": "Samosa",
+    "slug": "samosa",
+    "calories": 250,
+    "protein": 5.0,
+    "carbohydrates": 30.0
+  },
+  {
+    "name": "Salmon",
+    "slug": "salmon",
+    "calories": 208,
+    "protein": 20.4,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Sashimi",
+    "slug": "sashimi",
+    "calories": 130,
+    "protein": 20.0,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Scampi",
+    "slug": "scampi",
+    "calories": 180,
+    "protein": 20.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Seaweed Salad",
+    "slug": "seaweed_salad",
+    "calories": 50,
+    "protein": 2.0,
+    "carbohydrates": 8.0
+  },
+  {
+    "name": "Shrimp Scampi",
+    "slug": "shrimp_scampi",
+    "calories": 180,
+    "protein": 20.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Spaghetti Bolognese",
+    "slug": "spaghetti_bolognese",
+    "calories": 150,
+    "protein": 8.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Spring Rolls",
+    "slug": "spring_rolls",
+    "calories": 150,
+    "protein": 5.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Squash Soup",
+    "slug": "squash_soup",
+    "calories": 40,
+    "protein": 1.5,
+    "carbohydrates": 6.0
+  },
+  {
+    "name": "Steak Tartare",
+    "slug": "steak_tartare",
+    "calories": 180,
+    "protein": 25.0,
+    "carbohydrates": 0.5
+  },
+  {
+    "name": "Tuna",
+    "slug": "tuna",
+    "calories": 184,
+    "protein": 29.1,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Vegetable Curry",
+    "slug": "vegetable_curry",
+    "calories": 120,
+    "protein": 4.0,
+    "carbohydrates": 18.0
+  },
+  {
+    "name": "Vietnamese Spring Rolls",
+    "slug": "vietnamese_spring_rolls",
+    "calories": 100,
+    "protein": 5.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Wonton Soup",
+    "slug": "wonton_soup",
+    "calories": 50,
+    "protein": 4.0,
+    "carbohydrates": 6.0
+  },
+  {
+    "name": "Breakfast Burrito",
+    "slug": "breakfast_burrito",
+    "calories": 250,
+    "protein": 12.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Bruschetta",
+    "slug": "bruschetta",
+    "calories": 280,
+    "protein": 10.0,
+    "carbohydrates": 30.0
+  },
+  {
+    "name": "Caesar Salad",
+    "slug": "caesar_salad",
+    "calories": 180,
+    "protein": 10.0,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "Cannoli",
+    "slug": "cannoli",
+    "calories": 300,
+    "protein": 6.0,
+    "carbohydrates": 40.0
+  },
+  {
+    "name": "Caprese Salad",
+    "slug": "caprese_salad",
+    "calories": 150,
+    "protein": 8.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Carrot Cake",
+    "slug": "carrot_cake",
+    "calories": 360,
+    "protein": 4.0,
+    "carbohydrates": 50.0
+  },
+  {
+    "name": "Ceviche",
+    "slug": "ceviche",
+    "calories": 110,
+    "protein": 15.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Cheesecake",
+    "slug": "cheesecake",
+    "calories": 321,
+    "protein": 6.0,
+    "carbohydrates": 30.0
+  },
+  {
+    "name": "Chicken Curry",
+    "slug": "chicken_curry",
+    "calories": 150,
+    "protein": 15.0,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "Chicken Wings",
+    "slug": "chicken_wings",
+    "calories": 200,
+    "protein": 20.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Chiles en nogada",
+    "slug": "chiles_en_nogada",
+    "calories": 180,
+    "protein": 8.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Chocolate Cake",
+    "slug": "chocolate_cake",
+    "calories": 400,
+    "protein": 4.0,
+    "carbohydrates": 55.0
+  },
+  {
+    "name": "Churros",
+    "slug": "churros",
+    "calories": 350,
+    "protein": 4.0,
+    "carbohydrates": 45.0
+  },
+  {
+    "name": "Club Sandwich",
+    "slug": "club_sandwich",
+    "calories": 250,
+    "protein": 15.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Crab Cakes",
+    "slug": "crab_cakes",
+    "calories": 180,
+    "protein": 15.0,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "Donut",
+    "slug": "donut",
+    "calories": 417,
+    "protein": 5.0,
+    "carbohydrates": 58.0
+  },
+  {
+    "name": "Eggs Benedict",
+    "slug": "eggs_benedict",
+    "calories": 250,
+    "protein": 12.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Escargots",
+    "slug": "escargots",
+    "calories": 90,
+    "protein": 16.0,
+    "carbohydrates": 2.0
+  },
+  {
+    "name": "Falafel Sandwich",
+    "slug": "falafel_sandwich",
+    "calories": 333,
+    "protein": 13.0,
+    "carbohydrates": 31.0
+  },
+  {
+    "name": "Filet Mignon",
+    "slug": "filet_mignon",
+    "calories": 250,
+    "protein": 30.0,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "French Onion Soup",
+    "slug": "french_onion_soup",
+    "calories": 100,
+    "protein": 4.0,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "French Fries",
+    "slug": "french_fries",
+    "calories": 290,
+    "protein": 3.5,
+    "carbohydrates": 35.0
+  },
+  {
+    "name": "Fried Chicken",
+    "slug": "fried_chicken",
+    "calories": 246,
+    "protein": 20.0,
+    "carbohydrates": 12.0
+  },
+  {
+    "name": "Frog Legs",
+    "slug": "frog_legs",
+    "calories": 73,
+    "protein": 16.0,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Garlic Bread",
+    "slug": "garlic_bread",
+    "calories": 300,
+    "protein": 8.0,
+    "carbohydrates": 40.0
+  },
+  {
+    "name": "Gnocchi",
+    "slug": "gnocchi",
+    "calories": 180,
+    "protein": 5.0,
+    "carbohydrates": 30.0
+  },
+  {
+    "name": "Greek Salad",
+    "slug": "greek_salad",
+    "calories": 150,
+    "protein": 5.0,
+    "carbohydrates": 10.0
+  },
+  {
+    "name": "Gumbo",
+    "slug": "gumbo",
+    "calories": 80,
+    "protein": 5.0,
+    "carbohydrates": 8.0
+  },
+  {
+    "name": "Panna Cotta",
+    "slug": "panna_cotta",
+    "calories": 180,
+    "protein": 3.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Peking Duck",
+    "slug": "peking_duck",
+    "calories": 350,
+    "protein": 25.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Pho",
+    "slug": "pho",
+    "calories": 50,
+    "protein": 4.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Pita",
+    "slug": "pita",
+    "calories": 266,
+    "protein": 9.0,
+    "carbohydrates": 55.0
+  },
+  {
+    "name": "Pork Chop",
+    "slug": "pork_chop",
+    "calories": 200,
+    "protein": 25.0,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Pork Katsu",
+    "slug": "pork_katsu",
+    "calories": 280,
+    "protein": 20.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Pork Loin",
+    "slug": "pork_loin",
+    "calories": 180,
+    "protein": 27.0,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Prime Rib",
+    "slug": "prime_rib",
+    "calories": 300,
+    "protein": 28.0,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Pulled Pork Sandwich",
+    "slug": "pulled_pork_sandwich",
+    "calories": 250,
+    "protein": 18.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Quesadilla",
+    "slug": "quesadilla",
+    "calories": 280,
+    "protein": 15.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Ramen",
+    "slug": "ramen",
+    "calories": 150,
+    "protein": 6.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Ravioli",
+    "slug": "ravioli",
+    "calories": 180,
+    "protein": 8.0,
+    "carbohydrates": 25.0
+  },
+  {
+    "name": "Red Bean Soup",
+    "slug": "red_bean_soup",
+    "calories": 70,
+    "protein": 4.0,
+    "carbohydrates": 12.0
+  },
+  {
+    "name": "Risotto",
+    "slug": "risotto",
+    "calories": 120,
+    "protein": 4.0,
+    "carbohydrates": 18.0
+  },
+  {
+    "name": "Samosa",
+    "slug": "samosa",
+    "calories": 250,
+    "protein": 5.0,
+    "carbohydrates": 30.0
+  },
+  {
+    "name": "Salmon",
+    "slug": "salmon",
+    "calories": 208,
+    "protein": 20.4,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Sashimi",
+    "slug": "sashimi",
+    "calories": 130,
+    "protein": 20.0,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Scampi",
+    "slug": "scampi",
+    "calories": 180,
+    "protein": 20.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Seaweed Salad",
+    "slug": "seaweed_salad",
+    "calories": 50,
+    "protein": 2.0,
+    "carbohydrates": 8.0
+  },
+  {
+    "name": "Shrimp Scampi",
+    "slug": "shrimp_scampi",
+    "calories": 180,
+    "protein": 20.0,
+    "carbohydrates": 5.0
+  },
+  {
+    "name": "Spaghetti Bolognese",
+    "slug": "spaghetti_bolognese",
+    "calories": 150,
+    "protein": 8.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Spring Rolls",
+    "slug": "spring_rolls",
+    "calories": 150,
+    "protein": 5.0,
+    "carbohydrates": 20.0
+  },
+  {
+    "name": "Squash Soup",
+    "slug": "squash_soup",
+    "calories": 40,
+    "protein": 1.5,
+    "carbohydrates": 6.0
+  },
+  {
+    "name": "Steak Tartare",
+    "slug": "steak_tartare",
+    "calories": 180,
+    "protein": 25.0,
+    "carbohydrates": 0.5
+  },
+  {
+    "name": "Tuna",
+    "slug": "tuna",
+    "calories": 184,
+    "protein": 29.1,
+    "carbohydrates": 0.0
+  },
+  {
+    "name": "Vegetable Curry",
+    "slug": "vegetable_curry",
+    "calories": 120,
+    "protein": 4.0,
+    "carbohydrates": 18.0
+  },
+  {
+    "name": "Vietnamese Spring Rolls",
+    "slug": "vietnamese_spring_rolls",
+    "calories": 100,
+    "protein": 5.0,
+    "carbohydrates": 15.0
+  },
+  {
+    "name": "Wonton Soup",
+    "slug": "wonton_soup",
+    "calories": 50,
+    "protein": 4.0,
+    "carbohydrates": 6.0
+  }
+]
