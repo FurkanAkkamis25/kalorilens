@@ -8,5 +8,6 @@ import { ConfigModule } from '@nestjs/config';
   imports: [HttpModule, ConfigModule],
   controllers: [AiProxyController],
   providers: [AiProxyService],
+  exports: [AiProxyService],
 })
 export class AiProxyModule { }

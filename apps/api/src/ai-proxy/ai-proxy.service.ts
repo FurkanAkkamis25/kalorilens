@@ -24,7 +24,7 @@ export class AiProxyService {
             });
 
             const response = await firstValueFrom(
-                this.httpService.post(`${this.aiServiceUrl}/analyze`, formData, {
+                this.httpService.post(`${this.aiServiceUrl}/predict`, formData, {
                     headers: {
                         ...formData.getHeaders(),
                     },

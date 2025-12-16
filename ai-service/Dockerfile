@@ -17,8 +17,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 5. Senin Kodlarını İçeri Kopyala
 COPY . .
 
-# 6. Dışarıya 8000 Portunu Aç
-EXPOSE 8000
+# 6. Dışarıya 5000 Portunu Aç
+EXPOSE 5000
 
 # 7. Uygulamayı Başlat
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]
