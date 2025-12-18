@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 // --- Konfigürasyonlar ---
 const CSV_FILE_NAME = 'Yemeklik Liste.csv';
 const CSV_FILE_PATH = path.join(__dirname, 'infra', 'data', CSV_FILE_NAME);
+
 // Kimlik doğrulama, port ve veritabanı adresi ayarlandı
 const MONGODB_URI = process.env.MONGO_URI;
 
@@ -14,7 +15,6 @@ if (!MONGODB_URI) {
     console.error('Hata: MONGO_URI ortam değişkeni tanımlanmamış! Lütfen .env dosyasını kontrol edin.');
     process.exit(1);
 }
-
 
 // --- MongoDB Şeması ---
 const FoodSchema = new mongoose.Schema({
@@ -66,13 +66,12 @@ async function seedDatabase() {
                     mapHeaders: ({ header }) => {
                         const trimmedHeader = header ? header.trim() : null;
 
-                        // DEBUG ÇIKTISINA GÖRE GÜNCELLENMİŞ EŞLEŞTİRMELER:
-                        if (trimmedHeader === 'Yemek Adý') return 'name'; // Bozulmuş başlık eşleşmesi!
+                        if (trimmedHeader === 'Yemek Adý') return 'name'; 
                         if (trimmedHeader === 'Kalori (kcal)') return 'calories';
                         if (trimmedHeader === 'Birim') return 'unit';
                         if (trimmedHeader === 'Protein (gr)') return 'protein';
                         if (trimmedHeader === 'Karbonhidrat (gr)') return 'carbohydrates';
-                        if (trimmedHeader === 'Yað (gr)') return 'fat'; // Bozulmuş başlık eşleşmesi!
+                        if (trimmedHeader === 'Yað (gr)') return 'fat'; 
                         return null;
                     }
                 }))
@@ -83,7 +82,7 @@ async function seedDatabase() {
                     const carbVal = String(data.carbohydrates).replace(',', '.');
                     const fatVal = String(data.fat).replace(',', '.');
 
-                    // Veri dönüşüm mantığı (İngilizce Anahtarları Kullanıyoruz)
+                    // Veri dönüşüm mantığı
                     const foodItem = {
                         name: data.name,
                         unit: data.unit,
@@ -120,10 +119,9 @@ async function seedDatabase() {
         }
     }
 
-
     // 5. Bağlantıyı Kapat
     mongoose.connection.close();
-    console.log('Besleme işlemi tamamlandı.');
+    console.log('Besleme işlemi tamamlandı. MongoDB bağlantısı kapatıldı.');
 }
 
 // Fonksiyonu çalıştır

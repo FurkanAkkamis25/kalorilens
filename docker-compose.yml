@@ -1,18 +1,18 @@
 version: '3.8'
 
 services:
-  # 1. AI Service (Senin Python Kodun)
+  # 1. AI Service (Sena's Configuration)
   ai_service:
     build: ./ai-service
     container_name: kalorilens_ai
     ports:
-      - "8000:8000"  # Python kodundaki port ile eşitlendi
+      - "5000:5000"
     volumes:
       - ./ai-service:/app
     environment:
       - FLASK_ENV=development
 
-  # 2. Postgres Veritabanı
+  # 2. Postgres (Sena's Configuration)
   postgres:
     image: postgres:15
     container_name: kalorilens_postgres
@@ -38,7 +38,7 @@ services:
     depends_on:
       - postgres
 
-  # 3. MongoDB Veritabanı
+  # 3. MongoDB (Sena's Configuration)
   mongo:
     image: mongo:6.0
     container_name: kalorilens_mongo
@@ -65,17 +65,19 @@ services:
     depends_on:
       - mongo
 
-  # 5. Backend API (Node.js Sunucun)
+  # 5. Backend API (User's Service connected to above)
   api:
-    build: .  # <-- KRİTİK DÜZELTME: Dosya hemen burada, 'apps/api' klasöründe değil
+    build:
+      context: ./apps/api
+      dockerfile: Dockerfile
     container_name: kalorilens_api
     restart: always
     ports:
       - "3000:3000"
     environment:
       DATABASE_URL: postgresql://admin:password123@postgres:5432/kalorilens_db
-      MONGO_URL: mongodb://admin:password123@mongo:27017/kalorilens_db
-      AI_SERVICE_URL: http://ai_service:8000 # AI servisine 8000 portundan bağlanacak
+      MONGO_URI: mongodb://admin:password123@mongo:27017/kalorilens_db?authSource=admin
+      AI_SERVICE_URL: http://ai_service:5000
     depends_on:
       - postgres
       - mongo

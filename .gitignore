@@ -3,4 +3,3 @@ node_modules
 dist
 .env
 ai-service/venv/
-ai-service/venv/
