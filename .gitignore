@@ -1,5 +1,6 @@
+**/serviceAccountKey.json
 node_modules
 dist
 .env
-.DS_Store
-venv/
+ai-service/venv/
+ai-service/venv/
