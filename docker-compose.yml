@@ -68,15 +68,15 @@ services:
   # 5. Backend API (User's Service connected to above)
   api:
     build:
-      context: .
-      dockerfile: apps/api/Dockerfile
+      context: ./apps/api
+      dockerfile: Dockerfile
     container_name: kalorilens_api
     restart: always
     ports:
       - "3000:3000"
     environment:
       DATABASE_URL: postgresql://admin:password123@postgres:5432/kalorilens_db
-      MONGO_URL: mongodb://admin:password123@mongo:27017/kalorilens_db
+      MONGO_URI: mongodb://admin:password123@mongo:27017/kalorilens_db?authSource=admin
       AI_SERVICE_URL: http://ai_service:5000
     depends_on:
       - postgres

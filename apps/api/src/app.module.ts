@@ -10,6 +10,7 @@ import { AiProxyModule } from './ai-proxy/ai-proxy.module';
 import { FirebaseModule } from './firebase/firebase.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { FoodsModule } from './foods/foods.module';
 
 @Module({
   imports: [
@@ -21,7 +22,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
       }),
       inject: [ConfigService],
     }),
-    PrismaModule, UsersModule, GoalsModule, AuthModule, MealsModule, AiProxyModule, FirebaseModule
+    PrismaModule, UsersModule, GoalsModule, AuthModule, MealsModule, AiProxyModule, FirebaseModule, FoodsModule
   ],
   controllers: [AppController],
   providers: [AppService],
