@@ -11,6 +11,7 @@ import { FirebaseModule } from './firebase/firebase.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { FoodsModule } from './foods/foods.module';
+import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
@@ -22,7 +23,7 @@ import { FoodsModule } from './foods/foods.module';
       }),
       inject: [ConfigService],
     }),
-    PrismaModule, UsersModule, GoalsModule, AuthModule, MealsModule, AiProxyModule, FirebaseModule, FoodsModule
+    PrismaModule, UsersModule, GoalsModule, AuthModule, MealsModule, AiProxyModule, FirebaseModule, FoodsModule, ProductsModule
   ],
   controllers: [AppController],
   providers: [AppService],
