@@ -72,6 +72,8 @@ services:
       dockerfile: Dockerfile
     container_name: kalorilens_api
     restart: always
+    env_file:
+      - ./apps/api/.env
     ports:
       - "3000:3000"
     environment:
