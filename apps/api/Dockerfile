@@ -15,6 +15,7 @@ RUN npx prisma generate
 
 # Build
 RUN npm run build
+RUN cp src/serviceAccountKey.json dist/
 
 EXPOSE 3000
 
