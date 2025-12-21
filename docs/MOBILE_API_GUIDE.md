@@ -1,16 +1,15 @@
-# KaloriLens API - Tam Dokümantasyon
+# KaloriLens API - Mobil Geliştirici Rehberi
 
-Bu belge, backend üzerindeki **tüm** servisleri, endpoint'leri ve kullanım şekillerini içerir.
+Bu belge, KaloriLens mobil uygulaması için backend servislerinin kullanımını açıklar.
 
-## 1. Genel Kurallar
-*   **Base URL:** `http://<IP_ADRESI>:3000`
-*   **Yetkilendirme:** Giriş yaptıktan sonra tüm korumalı isteklere header eklenmeli: `Authorization: Bearer <token>`
-*   **Firebase Header:** Profil işlemlerinde `x-firebase-uid: <UID>` header'ı zorunludur.
+## ⚠️ Önemli Notlar
+1.  **Base URL:** `http://<IP_ADRESI>:3000` (Emülatör için genelde `10.0.2.2:3000`)
+2.  **Auth Header:** Login gerektiren işlemlerde `Authorization: Bearer <TOKEN>` gönderilmelidir.
+3.  **Firebase Header:** `/users/me` gibi kullanıcıya özel işlemlerde `x-firebase-uid: <UID>` header'ı **zorunludur**.
 
 ---
 
 ## 2. Authentication (Kimlik Doğrulama)
-`/auth` altındaki servisler
 
 ### 2.1. Kayıt Ol (Register)
 *   **URL:** `/auth/register`
@@ -18,48 +17,58 @@ Bu belge, backend üzerindeki **tüm** servisleri, endpoint'leri ve kullanım ş
 *   **Body:**
     ```json
     {
-      "email": "user@example.com",
-      "password": "123",
-      "age": 25,          // Zorunlu Number
-      "heightCm": 180,    // Zorunlu Number
-      "weightKg": 75.5,   // Zorunlu Number
-      "activityLevel": "moderate",
-      "goalType": "maintain"
+      "email": "user@gmail.com",
+      "password": "Password123!",
+      "age": 25,
+      "heightCm": 180,
+      "weightKg": 75.5,
+      "activityLevel": "moderate", // active, sedentary vb.
+      "goalType": "maintain", // lose_weight, gain_muscle vb.
+      "firebaseUid": "FIREBASE_UID_BURAYA" // Opsiyonel ama önerilir
     }
     ```
+*   **Response (201):** Oluşturulan kullanıcı objesi.
 
 ### 2.2. Giriş Yap (Login)
 *   **URL:** `/auth/login`
 *   **Method:** `POST`
 *   **Body:**
     ```json
-    { "email": "user@example.com", "password": "123" }
+    {
+      "email": "user@gmail.com",
+      "password": "Password123!"
+    }
     ```
-*   **Response:** `{ "access_token": "...", "user": {...} }`
+*   **Response (200):**
+    ```json
+    {
+      "access_token": "JWT_TOKEN...",
+      "user": { "id": "...", "email": "..." }
+    }
+    ```
 
-### 2.3. Token Doğrulama (Verify)
+### 2.3. Token Doğrulama
 *   **URL:** `/auth/verify-token`
 *   **Method:** `POST`
-*   **Header:** `Authorization: Bearer <token>`
+*   **Body:** `{ "token": "FIREBASE_OR_JWT_TOKEN" }`
 
 ---
 
 ## 3. Kullanıcı İşlemleri (Users)
-`/users` altındaki servisler
 
 ### 3.1. Profilimi Getir
 *   **URL:** `/users/me`
 *   **Method:** `GET`
 *   **Headerlar:**
-    *   `Authorization: Bearer <token>`
+    *   `Authorization: Bearer <TOKEN>`
     *   `x-firebase-uid: <FIREBASE_UID>` (**Zorunlu**)
-*   **Response:** Kullanıcı bilgileri ve günlük özetler.
+*   **Response (200):** Kullanıcı detayları.
 
 ### 3.2. Profilimi Güncelle
 *   **URL:** `/users/me`
 *   **Method:** `PUT`
-*   **Headerlar:** Same as above.
-*   **Body:** (Güncellenecek alanlar)
+*   **Headerlar:** (Üstteki ile aynı)
+*   **Body:**
     ```json
     { "weightKg": 78, "activityLevel": "active" }
     ```
@@ -68,26 +77,44 @@ Bu belge, backend üzerindeki **tüm** servisleri, endpoint'leri ve kullanım ş
 
 ## 4. Yemek ve Ürün İşlemleri
 
-### 4.1. Barkod ile Ürün Ara (Products)
+### 4.1. Barkod ile Ürün Ara
 *   **URL:** `/products/:barcode` (Örn: `/products/869123456`)
 *   **Method:** `GET`
-*   **Header:** `Authorization: Bearer <token>`
-*   **Açıklama:** Veritabanında yoksa otomatik olarak OpenFoodFacts'ten çeker ve kaydeder.
+*   **Header:** `Authorization: Bearer <TOKEN>`
+*   **Açıklama:** Veritabanında yoksa OpenFoodFacts'ten çeker.
+*   **Response (200):**
+    ```json
+    {
+      "urun_adi": "Nutella",
+      "marka": "Ferrero",
+      "kalori": 540,
+      ...
+    }
+    ```
 
 ### 4.2. Yemek Ekle (Meals)
 *   **URL:** `/meals`
 *   **Method:** `POST`
-*   **Header:** `Authorization: Bearer <token>`
-*   **Body:**
+*   **Header:** `Authorization: Bearer <TOKEN>`
+*   **Body (Dikkat: 'foods' dizisi içerir):**
     ```json
     {
-      "name": "Elma",
-      "calories": 52,
-      "protein": 0.3,
-      "carbs": 14,
-      "fat": 0.2,
-      "amount": 100,
-      "unit": "g"
+      "name": "Kahvaltı",
+      "totalCalories": 300,
+      "totalProtein": 15,
+      "totalCarbs": 40,
+      "totalFat": 10,
+      "foods": [
+        {
+          "name": "Yumurta",
+          "calories": 150,
+          "protein": 12,
+          "carbs": 1,
+          "fat": 10,
+          "amount": 2,
+          "unit": "adet"
+        }
+      ]
     }
     ```
 
@@ -98,11 +125,11 @@ Bu belge, backend üzerindeki **tüm** servisleri, endpoint'leri ve kullanım ş
 ### 5.1. Resim Analizi (AI)
 *   **URL:** `/ai/analyze`
 *   **Method:** `POST`
-*   **Header:** `Authorization: Bearer <token>`
-*   **Body:** Multipart Form Data (Resim dosyası 'image' key'i ile).
+*   **Header:** `Authorization: Bearer <TOKEN>`
+*   **Body:** Multipart Form Data (`image` dosyası).
 
-### 5.2. Hedefleri Yeniden Hesapla (Goals)
+### 5.2. Hedefleri Yeniden Hesapla
 *   **URL:** `/goals/recalc`
 *   **Method:** `POST`
-*   **Header:** `Authorization: Bearer <token>`
-*   **Body:** `{ "userId": "..." }`
+*   **Header:** `Authorization: Bearer <TOKEN>`
+
