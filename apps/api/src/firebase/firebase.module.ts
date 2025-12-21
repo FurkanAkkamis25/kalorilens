@@ -14,7 +14,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
                 // NestJS build sonrası dist klasöründe çalışacağı için dosyanın oraya kopyalanması veya
                 // root dizinden okunması gerekir.
                 // Basitlik için burada require kullanıyoruz.
-                const serviceAccount = require('../../serviceAccountKey.json');
+                // YENİ: serviceAccountKey.json 'src' klasörüne taşınacak.
+                // Bu dosya 'src/firebase/firebase.module.ts' olduğu için bir üst klasördeki dosyaya erişim '../' ile yapılır.
+                const serviceAccount = require('../serviceAccountKey.json');
 
                 return admin.initializeApp({
                     credential: admin.credential.cert(serviceAccount),
